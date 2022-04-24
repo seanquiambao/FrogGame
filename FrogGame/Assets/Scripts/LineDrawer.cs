@@ -30,14 +30,14 @@ public class LineDrawer : MonoBehaviour
             lr.enabled = true;
             startingPosition = player.position;
             
-            lr.SetPosition(0, new Vector3(startingPosition.x, startingPosition.y, startingPosition.z));
+            lr.SetPosition(0, new Vector3(startingPosition.x, startingPosition.y, 0f));
             lr.useWorldSpace = true;
             lr.numCapVertices = 10;
         }
         if(Input.GetMouseButton(0)){
             mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             
-            lr.SetPosition(1, new Vector3(mousePos.x, mousePos.y, mousePos.z));
+            lr.SetPosition(1, new Vector3(mousePos.x, mousePos.y, 0f));
             
         }
         if(Input.GetMouseButtonUp(0)){

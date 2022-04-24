@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
             FindObjectOfType<GameManager>().GameOver();
         }
         if(collision.gameObject.tag == "Collectible"){
-            FindObjectOfType<GameManager>().increaseScoring(5);
+            FindObjectOfType<GameManager>().increaseScoring(2);
         }
     }
     void OnTriggerExit2D(Collider2D collision){

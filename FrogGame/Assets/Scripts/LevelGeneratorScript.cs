@@ -39,7 +39,7 @@ public class LevelGeneratorScript : MonoBehaviour
         Transform lastLevelPart = InstantiateLevelPart(endPosition);
         endPosition = lastLevelPart.Find("EndPosition").position;
         endPosition.x += offsetPosition.x;
-        endPosition.y = (endPosition.y) + offsetPosition.y + Random.Range(-1, 1f);
+        endPosition.y = (endPosition.y) + offsetPosition.y + Random.Range(-0.5f, 0.5f);
     }
 
     private Transform InstantiateLevelPart(Vector3 spawnPosition){

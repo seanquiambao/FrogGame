@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public Text scoreText;
     public Player player;
     public LevelGeneratorScript levelgenerator;
+    public LineDrawer ld;
     public GameObject playButton;
     public GameObject retryButton;
     public GameObject gameOver;
@@ -22,6 +23,8 @@ public class GameManager : MonoBehaviour
         gameOver.SetActive(false);
         
         retryButton.SetActive(false);
+        ld.enabled = false;
+
         gameoverSound = GetComponent<AudioSource>();
         Application.targetFrameRate = 60;
         Pause();
@@ -36,6 +39,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
         player.enabled = true;
         levelgenerator.enabled = true;
+        ld.enabled = true;
         
 
     }
@@ -64,6 +68,7 @@ public class GameManager : MonoBehaviour
     public void GameOver(){
         gameOver.SetActive(true);
         retryButton.SetActive(true);
+        ld.enabled = false;
         gameoverSound.Play();
 
         Pause();

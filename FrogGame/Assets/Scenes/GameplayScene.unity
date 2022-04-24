@@ -318,6 +318,7 @@ MonoBehaviour:
   scoreText: {fileID: 1571675986}
   player: {fileID: 2012863750}
   levelgenerator: {fileID: 1157318785}
+  ld: {fileID: 942821770}
   playButton: {fileID: 1302417673}
   retryButton: {fileID: 1609197224}
   gameOver: {fileID: 212155114}
@@ -522,7 +523,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.46562672, y: 5.792897, z: 1228.3396}
+  m_LocalPosition: {x: 0.46562672, y: 5.14, z: 1228.3396}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1332577321}
@@ -683,7 +684,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -703,7 +704,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
@@ -736,8 +737,8 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.02441454, g: 0, b: 1, a: 1}
-      key1: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.6121421, g: 0, b: 1, a: 1}
+      key1: {r: 0.28069252, g: 0.25511748, b: 0.5943396, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -769,7 +770,7 @@ LineRenderer:
     textureMode: 0
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 1
+  m_UseWorldSpace: 0
   m_Loop: 0
 --- !u!4 &942821772
 Transform:
@@ -833,6 +834,7 @@ MonoBehaviour:
   - {fileID: 2131368386949796129, guid: 95e90d75cd6acb249be9a5e9017fd8cc, type: 3}
   - {fileID: 2131368386949796129, guid: 040b5543941548e4b9e2bc75af86d7d2, type: 3}
   - {fileID: 2131368386949796129, guid: 447ae9bb918afbb4bbf81f33450dd2bd, type: 3}
+  - {fileID: 2131368386949796129, guid: b2c1e35a55ee4d9429e8e753a8320d22, type: 3}
   entryLevel: {fileID: 7950884078280328083, guid: 13deac2275866a34288fd03237f25e04, type: 3}
   offsetPosition: {x: 15, y: -3, z: 0}
   SPAWNING_DISTANCE: 50
