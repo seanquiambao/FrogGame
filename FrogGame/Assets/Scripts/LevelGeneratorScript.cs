@@ -9,7 +9,7 @@ public class LevelGeneratorScript : MonoBehaviour
     public Transform entryLevel;
     public Vector3 offsetPosition;
     public float SPAWNING_DISTANCE;
-    public Transform target;
+    public Player target;
 
     private Vector3 endPosition;
     // Start is called before the first frame update
@@ -29,7 +29,7 @@ public class LevelGeneratorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Distance(target.position, endPosition) < SPAWNING_DISTANCE){
+        if(Vector3.Distance(target.GetPosition(), endPosition) < SPAWNING_DISTANCE){
             SpawnLevelPart();
         }
         
@@ -39,7 +39,7 @@ public class LevelGeneratorScript : MonoBehaviour
         Transform lastLevelPart = InstantiateLevelPart(endPosition);
         endPosition = lastLevelPart.Find("EndPosition").position;
         endPosition.x += offsetPosition.x;
-        endPosition.y = (endPosition.y) + offsetPosition.y + Random.Range(-2f, 0f);
+        endPosition.y = (endPosition.y) + offsetPosition.y + Random.Range(-1, 1f);
     }
 
     private Transform InstantiateLevelPart(Vector3 spawnPosition){
