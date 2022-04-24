@@ -471,6 +471,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 367901be96f9e804c9f012bf023f3c44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 2012863754}
   cameraSpeed: 1.5
 --- !u!20 &519420031
 Camera:
@@ -523,7 +524,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.46562672, y: 5.14, z: 1228.3396}
+  m_LocalPosition: {x: 0.46562672, y: 4.3, z: 1228.3396}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1332577321}
@@ -645,6 +646,7 @@ GameObject:
   - component: {fileID: 942821772}
   - component: {fileID: 942821771}
   - component: {fileID: 942821770}
+  - component: {fileID: 942821773}
   m_Layer: 0
   m_Name: LineRenderer
   m_TagString: Untagged
@@ -786,6 +788,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &942821773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942821769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 5, y: -5}
+  m_UseGraphicAlpha: 1
 --- !u!1 &1157318783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,7 +1526,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0035158694, y: 0.0017579794}
+  m_Offset: {x: 0.018390685, y: 0.0017579794}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1520,7 +1537,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6413856, y: 0.6449013}
+  m_Size: {x: 0.6851987, y: 0.6449013}
   m_EdgeRadius: 0
 --- !u!70 &2012863752
 CapsuleCollider2D:
@@ -1535,8 +1552,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0032925606, y: 0.07353437}
-  m_Size: {x: 0.66415596, y: 0.76512885}
+  m_Offset: {x: 0.0069305897, y: 0.01949811}
+  m_Size: {x: 0.64370966, y: 0.65705633}
   m_Direction: 0
 --- !u!212 &2012863753
 SpriteRenderer:
