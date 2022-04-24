@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     private BoxCollider2D box2D;
     public Animator animator;
     public int ForceMultiplier;
+    public AudioSource jumpSound;
 
     
     private Vector2 distanceFromPlayer;
@@ -24,6 +25,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = transform.GetComponent<Rigidbody2D>();
+        jumpSound = GetComponent<AudioSource>();
     }
 
     
@@ -68,6 +70,7 @@ public class Player : MonoBehaviour
 
     public void Launch(Vector2 forceImpact){
         rb.AddForce(forceImpact, ForceMode2D.Impulse);
+        jumpSound.Play();
     }
 
     public Vector3 GetPosition(){

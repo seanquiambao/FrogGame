@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,9 +14,15 @@ public class GameManager : MonoBehaviour
     public Player player;
     public LevelGeneratorScript levelgenerator;
     public GameObject playButton;
+    public GameObject retryButton;
     public GameObject gameOver;
+    private AudioSource gameoverSound;
 
     private void Awake(){
+        gameOver.SetActive(false);
+        
+        retryButton.SetActive(false);
+        gameoverSound = GetComponent<AudioSource>();
         Application.targetFrameRate = 60;
         Pause();
     }
@@ -26,15 +33,10 @@ public class GameManager : MonoBehaviour
         scoreText.text = score.ToString();
 
         playButton.SetActive(false);
-        gameOver.SetActive(false);
         Time.timeScale = 1f;
         player.enabled = true;
         levelgenerator.enabled = true;
         
-
-        
-        
-
 
     }
     
@@ -51,9 +53,14 @@ public class GameManager : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
+    public void resetScene(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void GameOver(){
         gameOver.SetActive(true);
-        playButton.SetActive(true);
+        retryButton.SetActive(true);
+        gameoverSound.Play();
 
         Pause();
     }
