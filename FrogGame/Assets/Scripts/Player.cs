@@ -60,6 +60,9 @@ public class Player : MonoBehaviour
         if(collision.gameObject.tag == "KillColider"){
             FindObjectOfType<GameManager>().GameOver();
         }
+        if(collision.gameObject.tag == "Collectible"){
+            FindObjectOfType<GameManager>().increaseScoring(5);
+        }
     }
     void OnTriggerExit2D(Collider2D collision){
         if(collision.gameObject.tag == "Platform"){

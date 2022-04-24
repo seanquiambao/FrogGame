@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Platform
   - KillColider
+  - Collectible
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Particle
   - Water
   - UI
   - 

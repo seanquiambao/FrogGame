@@ -43,7 +43,7 @@ public class LevelGeneratorScript : MonoBehaviour
     }
 
     private Transform InstantiateLevelPart(Vector3 spawnPosition){
-        int levelIndex = Random.Range(0, listOfLevels.Count - 1);
+        int levelIndex = Random.Range(0, listOfLevels.Count);
 
         Transform levelPartGameObject = Instantiate(listOfLevels[levelIndex], spawnPosition, Quaternion.identity);
         return levelPartGameObject;

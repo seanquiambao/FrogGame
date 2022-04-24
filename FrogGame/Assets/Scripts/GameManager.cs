@@ -52,6 +52,10 @@ public class GameManager : MonoBehaviour
         score++;
         scoreText.text = score.ToString();
     }
+    public void increaseScoring(int points){
+        score += points;
+        scoreText.text = score.ToString();
+    }
 
     public void resetScene(){
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
